@@ -89,3 +89,9 @@ input[type='submit'] {
     background: red;
     color: #eee;
 }
+
+#del-btn:hover {
+    background: red;
+    font-size: larger;
+    color: #eee;
+}

@@ -2,15 +2,25 @@ import React, {useContext, useState} from 'react';
 import { BookContext } from '../context/BookContext';
 
 export default function BookForm() {
-    const {addBook} = useContext(BookContext)
+//%%  WAS COMMENT BECAUSE OF REDUX
+    // const {addBook} = useContext(BookContext)
+//%%%%%%%%%%%%%%%%%%%%%%%%%
+    const {dispatch} = useContext(BookContext) 
+
     const [title, setTitle] = useState('')
     const [author, setAuthor] = useState("")
     const [year, setYear] = useState("")
 
     const handleSubmit =(e) => {
         e.preventDefault()
-        addBook(title, author, year)
-        console.log(title, author, year)
+
+        //%%  WAS COMMENT BECAUSE OF REDUX
+        // addBook(title, author, year)
+        //%%%%%%%%%%%%%%%%%%%%%%%%
+        dispatch({type: 'ADD_BOOK', book:{
+            title, author, year
+        }})
+
         setAuthor("")
         setTitle("")
         setYear("")

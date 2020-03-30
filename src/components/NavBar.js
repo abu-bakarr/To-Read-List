@@ -7,7 +7,7 @@ export default function NavBar() {
     console.log(books)
   return (
     <div className="navbar">
-        <h2>Reading Lists</h2>
+        <h2>Lovel's Reading Lists</h2>
         <p key={books.id}>Currently have {books.length}</p>
     </div>
   );
